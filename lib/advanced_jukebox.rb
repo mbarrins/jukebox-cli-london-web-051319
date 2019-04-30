@@ -26,7 +26,7 @@ end
 
 
 def list(my_songs)
-  #this method is different! Collect the keys of the my_songs hash and 
+  #this method is different! Collect the keys of the my_songs hash and
   #list the songs by name
   my_songs.keys.each{|song| puts "#{song}"}
 end
@@ -44,7 +44,7 @@ def play(my_songs)
   song = gets.chomp
 
   if my_songs.include?(song)
-    system open "#{my_songs[song]}"
+    system "open #{my_songs[song]}"
   else
     puts "Invalid input, please try again"
   end
